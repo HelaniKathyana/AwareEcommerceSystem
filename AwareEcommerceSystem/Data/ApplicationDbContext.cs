@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using AwareEcommerceSystem.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,7 @@ namespace AwareEcommerceSystem.Data
             : base(options)
         {
         }
+
+        public DbSet<ProductTypes> ProductTypes { get; set; }
     }
 }

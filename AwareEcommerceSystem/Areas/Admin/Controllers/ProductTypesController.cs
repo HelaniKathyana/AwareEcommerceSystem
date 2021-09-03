@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace AwareEcommerceSystem.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Super user")]
     public class ProductTypesController : Controller
     {
         private ApplicationDbContext _db;

@@ -73,7 +73,13 @@
                     }
                     else
                     {
-                        <input type="submit" class="btn btn-info form-control" value="Add to Cart" />
+                        @if (Model.IsAvailable)
+                        {
+                            <input type="submit" class="btn btn-info form-control" value="Add to Cart" />
+                        }
+                        else { 
+                            <input class="btn btn-outline-dark form-control" value="Add to Cart" disabled/>
+                        }                       
                     }
                     
                 </div>
@@ -85,7 +91,7 @@
         </div>
         <div class="col-1"></div>
         <div class="col-3">
-            <img src="~/@Model.Image" style="border-radius: 5px; width: 100%; height: 250px; border: 1px solid #efefef" />
+            <img src="~/@Model.Image" style="border-radius: 5px; width: 100%; height: 320px; border: 1px solid #efefef" />
             @if (Model.IsAvailable)
             {
                 <img src="~/Images/instock-logo.png" style="width: 200px; height: 50px;" />

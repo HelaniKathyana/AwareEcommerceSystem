@@ -60,20 +60,19 @@
         <tbody>
             @foreach (var item in Model)
             {
-<tr>
-    <td>@item.Name</td>
-    <td>@item.Price</td>
-    <td>@item.ProductColor</td>
-    <td>@item.IsAvailable</td>
-    <td>@item.ProductTypes.ProductType</td>
-    <td>@item.SpecialTag.Name</td>
-    <td>
-        <partial name="ButtonPartial" model="@item.Id" />
-    </td>
-</tr>            }
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.ProductColor</td>
+                    <td>@item.IsAvailable</td>
+                    <td>@item.ProductTypes.ProductType</td>
+                    <td>@item.SpecialTag.Name</td>
+                    <td>
+                        <partial name="ButtonPartial" model="@item.Id" />
+                    </td>
+                </tr>            
+            }
         </tbody>
-
-
     </table>
 </div>
 

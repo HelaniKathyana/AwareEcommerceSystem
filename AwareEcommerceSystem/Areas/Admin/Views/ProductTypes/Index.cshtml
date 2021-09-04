@@ -23,12 +23,13 @@
         </tr>
         @foreach (var item in Model)
         {
-<tr>
-    <td> @item.ProductType</td>
-    <td>
-        <partial name="ButtonPartial" model="@item.Id" />
-    </td>
-</tr>}
+        <tr>
+            <td> @item.ProductType</td>
+            <td>
+                <partial name="ButtonPartial" model="@item.Id" />
+            </td>
+        </tr>
+        }
     </table>
 </div>
 

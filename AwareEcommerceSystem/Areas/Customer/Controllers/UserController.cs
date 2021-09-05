@@ -40,7 +40,7 @@ namespace AwareEcommerceSystem.Areas.Customer.Controllers
                 {
                     var isSaveRole = await _userManager.AddToRoleAsync(user, "User");
                     TempData["save"] = "User has been created successfully";
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToPage("/Account/Login", new { area = "Identity" });
                 }
                 foreach (var error in result.Errors)
                 {
